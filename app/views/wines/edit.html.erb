@@ -1,0 +1,10 @@
+<h1>Edit Wine</h1>
+
+<%= simple_form_for @wine, :html => { :multipart => true } do |f| %>
+	<%= f.select :category_id, @categories %>
+	<%= f.file_field :wine_img %>
+	<%= f.input :name, label: "Wine Name" %>
+	<%= f.input :description %>
+	<%= f.input :origin %>
+	<%= f.button :submit %>
+<% end %>
