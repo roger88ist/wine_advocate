@@ -1,6 +1,7 @@
 class WinesController < ApplicationController
 
   before_action :find_wine, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new, :edit]
 
   def index
     if params[:category].blank?
@@ -17,6 +18,11 @@ class WinesController < ApplicationController
   end
 
   def show
+    if @wine.reviews.blank?
+      @average_review = 0
+    else
+      @average_review = @wine.reviews.average(:rating).round(2)
+    end
   end
 
   def create
