@@ -13,5 +13,20 @@
  *= require_tree .
  *= require_self
  */
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.wine {
+	border: 3px solid black;
+	border-radius: 10px;
+	height: 350px;
+	width: 200px;
+}
+
+.wine-show {
+	border: 3px solid black;
+	border-radius: 10px;
+	height: 350px;
+	width: 200px;
+}

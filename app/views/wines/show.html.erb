@@ -1,8 +1,26 @@
-<h2><%= @wine.name %></h2>
-<h3><%= @wine.origin %></h3>
-<h4>Category: <%= @wine.category.name %></h4>
-<p><%= @wine.description %></p>
+<div class="row">
 
+	<div class="col-md-4">
+		<%= image_tag @wine.wine_img.url(:wine_show), class: "wine_show" %>
+	</div>
+
+	<div class="col-md-8">
+		<h2><%= @wine.name %></h2>
+		<h3><%= @wine.origin %></h3>
+		<h4>Category: <%= @wine.category.name %></h4>
+		<p><%= @wine.description %></p>
+	</div>
+
+</div>
+
+<div class="row">
+
+	<div class="col-md-4">
+		
+	</div>
+	
+
+</div>
 
 <%= link_to 'Home', root_path %>
 

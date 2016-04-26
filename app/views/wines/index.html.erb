@@ -5,10 +5,15 @@
 	<h1>There are no wines currently in this category</h1>
 <% else %>
 
-	<% @wines.each do |wine| %>
-		<a href="/wines/<%= wine.id %>">
-			<%= image_tag wine.wine_img.url(:wine_index) %>
-		</a>
-	<% end %>
+	<div class="row">
+
+		<% @wines.each do |wine| %>
+			<div class="col-md-3">
+				<a href="/wines/<%= wine.id %>">
+					<%= image_tag wine.wine_img.url(:wine_index), class: "wine" %>
+				</a>
+			</div>
+		<% end %>
+	</div>
 
 <% end %>
